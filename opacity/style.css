@@ -1,0 +1,23 @@
+body {
+  background-image: url(moroccan-flower.png);
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  opacity: 0.7;
+  position: relative;
+  /* jika propetinya 0 maka bisa tidak ditulis seperti berikut */
+  /* opacity untuk membuat suatu elemen tranparan dari 0 sampai 1, 0 itu akan tranpasan atau menghilang, kalau 1 itu akan solid */
+}
+
+.dua {
+  height: 150px;
+  width: 150px;
+  background-color: rebeccapurple;
+  position: absolute;
+  bottom: -50;
+  left: 200;
+  opacity: 0.5;
+}

@@ -1,0 +1,14 @@
+div img {
+  width: 500px;
+  height: 500px;
+}
+
+div {
+  text-align: center;
+}
+
+img {
+  -webkit-filter: grayscale(100%);
+  /* gunakan prefixes karena beberapa browser ada yang tidak support */
+  filter: grayscale(100%);
+}

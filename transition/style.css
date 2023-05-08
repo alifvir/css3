@@ -1,0 +1,54 @@
+body {
+  margin: 50px;
+  padding: 10px;
+}
+
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 5px;
+  line-height: 200px;
+  text-align: center;
+  transition: 2s;
+
+  /* didalam transition jika kita tidak menuliskan makan disebutkan all, kita juga dapat menuliskan nama propertinya */
+}
+.satu1 {
+  transition: all 2s ease;
+}
+.satu2 {
+  transition: all 2s ease-in;
+}
+.satu3 {
+  transition: all 2s ease-out;
+}
+.satu4 {
+  transition: all 2s ease-in-out;
+}
+.satu5 {
+  transition: all 2s linear;
+}
+.satu6 {
+  transition: all 2s cubic-bezier(0.24, -0.35, 0.78, 1.46);
+}
+.satu7 {
+  transition: all 3s 2s;
+  /* angka 3 merupakan durasi dan 2 merupakan delay, makana akan diem dulu 2 detik baru bergerak 3 detik */
+}
+.satu8 {
+  transition: margin-left 3s, transform 3s 2s, background-color 500ms 3s;
+}
+.container {
+  width: 1000px;
+  margin: 10px auto;
+  border: 3px solid black;
+}
+.container:hover .satu {
+  transform: rotate(360deg);
+  margin-left: 800px;
+  background-color: lightcoral;
+}
+/* didalam transisi kita dapat mengatur sekaligus beberapa trnaformasi */
+
+/* jika tidak menggunakan pembungkus lain maka akan patah2 karena css akan membaca hover class 1 */

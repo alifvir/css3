@@ -1,0 +1,33 @@
+div {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  margin: 50px auto;
+  box-shadow: 0px 30px 10px -20px rgba(0, 0, 0, 0.75);
+  /* jarang sekali jika menggunakan warna solid, biasanya pake rgba biar bisa diatur opacitynya */
+  /* artinya warna hitam dengan opacity 0.75 */
+  transition: 0.3s;
+  /* transisi akan berjalan selama 3 detik */
+}
+div:hover {
+  box-shadow: 0px 80px 10px -40px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+}
+
+.satu {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  margin: 50px auto;
+  box-shadow: inset 0px 30px 10px -20px rgba(0, 0, 0, 0.75);
+  /* jarang sekali jika menggunakan warna solid, biasanya pake rgba biar bisa diatur opacitynya */
+  /* artinya warna hitam dengan opacity 0.75 */
+}
+
+.dua {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75), 0px 0px 26px rgba(0, 0, 0, 0.75);
+}

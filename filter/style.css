@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+}
+.satu img {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  width: 300px;
+  height: 300px;
+}
+.dua img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: brightness(50%);
+}
+.tiga img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: contrast(50%);
+}
+.empat img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: saturate(50%);
+}
+.lima img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: grayscale(100%);
+}
+.enam img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: sepia(100%);
+}
+.tujuh img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: hue-rotate(100deg);
+}
+.delapan img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: invert(100%);
+}
+.sembilan img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: opacity(0.5);
+}
+.sepuluh img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: drop-shadow(5px 5px 5px black);
+}
+.sebelas img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  filter: drop-shadow(5px 5px 5px black) grayscale(100%);
+}
+.duabelas img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  transition: 1s;
+  filter: blur(10px) grayscale(1);
+}
+
+.duabelas img:hover {
+  filter: blur(0) grayscale(0);
+}

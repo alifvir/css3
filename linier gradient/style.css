@@ -1,0 +1,15 @@
+.satu {
+  width: 600px;
+  height: 300px;
+  margin: 50px auto;
+  background: linear-gradient(red, #fff, rgba(255, 122, 022, 1), blue);
+}
+/* warna awal merah lalu warna akhir biru, bisa pake rgb/hexa*/
+.dua {
+  width: 600px;
+  height: 300px;
+  margin: 50px auto;
+  /* background: linear-gradient(90deg, red, blue); */
+  background: linear-gradient(to bottom left, red 60%, blue 80%);
+}
+/* 90 dek merupakan untuk mengatur sudutnya mau dari mana, bisa menggunakan properti -90 untuk arah sebaliknya */

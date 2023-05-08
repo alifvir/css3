@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+  font-size: 20px;
+  line-height: 200px;
+}
+/* untuk membuat praragrafnya ditengah */
+.scale {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+.scale:hover {
+  transform: scale(2, 1);
+  /* scale 2 untuk sumbu X dan scale 1 untuk sumbu Y */
+}
+/* dalam scale titik tengahnya ada 1, jika kita masukan 0,5 maka akan mengecil setengahnya, lalu jika kita masukan 2
+maka akan membesar 2x lipat */
+
+.rotate {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.rotate:hover {
+  transform: rotate(-90deg);
+}
+/* titik utamanya rotate adalah 0, dan jika ingin berlawan arah maka menggunakan -90deg */
+
+.rotateX {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.rotateX:hover {
+  transform: rotateX(90deg);
+}
+/* rotate X maka titik sumbunya pindah tidak lagi ditengah, akan bearada diatas dan bawah */
+
+.rotateY {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.rotateY:hover {
+  transform: rotateY(90deg);
+}
+/* dalam rotate y maka titik sumbunya berpindah kekiri dan kaanan */
+
+.rotateXY {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.rotateXY:hover {
+  transform: rotate(90deg) rotateX(90deg) rotateY(90deg);
+}
+/* transform dapat dilakukan beberapa kali
+ */
+
+.skew {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.skew:hover {
+  transform: skew(-45deg);
+}
+/* skew akan memiringkan elemen kearah kiri jika tidak diberi - */
+
+.skewX {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.skewX:hover {
+  transform: skewX(45deg);
+}
+/* skewX dengan skew sama aja */
+.skewY {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.skewY:hover {
+  transform: skewY(45deg);
+}
+/* skewY kearah atas */
+
+.transalte {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  margin: 50px auto 0;
+  transition: 1s;
+}
+
+.transalte:hover {
+  transform: translate(100px, -100px);
+  /* ini artinya sumbu X kekanan 100, lalu sumbuy y -100 */
+}
+/* transalate untuk membuat elemen bergeser dari tempat asalnya, dia bisa digunaka bersamaan */

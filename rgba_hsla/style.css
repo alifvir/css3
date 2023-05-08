@@ -1,0 +1,29 @@
+body {
+  background-image: url(moroccan-flower.png);
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  background-color: RGBA(255, 102, 0, 0.8);
+}
+/* jika ingin div didalamnya tidak tranpsaran maka harus menggunakan properti rgba()
+
+RGBA = red green blue alpha/tranparansinya
+
+saat menggunakan rgba, maka elemen yang dibikin tranparan adalah warnanya itu sendiri buka lagi gambarnya/elemennya
+
+untuk opacity digunakan untuk membuat elemen tranparan tanpa memperdulikan mau dia div atau yang lain
+ */
+.dua {
+  height: 150px;
+  width: 150px;
+  background-color: hsla(hue, saturation, lightness, alpha);
+  /* HSLA = hue saturation lightness alpha
+hue untuk pergantian warna kotaknya
+saturnation dari 1-100% semakin dikurangin maka akan bergerak kewarna putih
+llighnes dia makin besar makin terang, makin kecil makin redup */
+  position: absolute;
+  bottom: -50;
+  left: 200;
+}

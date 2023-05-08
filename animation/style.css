@@ -1,0 +1,106 @@
+.kotak1 {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  transition: 2s ease all;
+  margin: 10px;
+}
+
+.kotak1:hover {
+  width: 1000px;
+}
+
+.kotak2 {
+  width: 300px;
+  height: 300px;
+  background-color: lightcoral;
+  margin: 10px;
+}
+
+.kotak2:hover {
+  animation: animasikotak2 2s ease;
+}
+/* contoh animasi akan dijalankan saat di hover, setelah menulis sintak animasinya, lalu menuliskan nama yang ada
+pada keyframe yaitu animasikotak2 lalu berapa lama transisi akan dilakukan lalu yang terakhit time functionnya */
+
+@keyframes animasikotak2 {
+  0% {
+    width: 300px;
+  }
+
+  50% {
+    width: 500px;
+    height: 100px;
+  }
+  100% {
+    width: 1000px;
+    height: 500px;
+  }
+}
+/* dalam keyframe kita dapat membuat animasi padaa from - to untuk 2 keadaan, dan juga 0% - 100% untuk beberapa keadaan
+sekaligus, lalu untuk setelah kita bikin animasinya, cara menggunakannya adalah, kita taro dimana kita mau animasi itu berjalan
+ */
+
+.kotak3 {
+  width: 300px;
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+  margin: 10px;
+  animation: animasikotak3 2s ease 1s 2 forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;  */
+}
+/* animasi dapat ditaro langsung pada .kotak3 tanpa harus menggunakan :hover, animasi akan dijalankan ketika direfarsh
+ */
+@keyframes animasikotak3 {
+  0% {
+    width: 300px;
+    height: 300px;
+  }
+  50% {
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    background-color: lightgreen;
+  }
+}
+
+.kotak4 {
+  width: 300px;
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+  margin: 10px;
+  animation: animasikotak3 2s ease 1s 2 reverse backwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;  */
+  /* reverse memulai animasi dari belakang atau dari komdisi 100% */
+}
+/* animasi dapat ditaro langsung pada .kotak3 tanpa harus menggunakan :hover, animasi akan dijalankan ketika direfarsh
+   */
+
+.kotak5 {
+  width: 300px;
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+  margin: 10px;
+  animation: animasikotak3 2s ease 1s 2 alternate both;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;  */
+  /* alternate animasinya akan normal dari 0% lalu pengulangan keduanya dia akan mulai dari 100% */
+}
+/* animasi dapat ditaro langsung pada .kotak3 tanpa harus menggunakan :hover, animasi akan dijalankan ketika direfarsh
+     */
+
+.kotak6 {
+  width: 300px;
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+  margin: 10px;
+  animation: animasikotak3 2s ease 1s 2 alternate-reverse;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode;  */
+  /* alternate rever animasinya akan memulai dari 100% lalu pengulangan keduanya normal*/
+}
+/* animasi dapat ditaro langsung pada .kotak3 tanpa harus menggunakan :hover, animasi akan dijalankan ketika direfarsh
+         */

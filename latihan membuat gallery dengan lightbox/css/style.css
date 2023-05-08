@@ -1,0 +1,184 @@
+/* font */
+@font-face {
+  font-family: "bebasneue";
+  src: url(../fonts/BebasNeue-Regular.woff) format("woff");
+  /* cara memanggil font yang kita punya di folder fonts */
+}
+
+/* style utama */
+
+body {
+  font: 18px/36px "bebasneue", "Arial Narrow", arial, sans-serif;
+  /* ukuran font/line height, lalu font yang ingin digunakan disemua body */
+  background-color: rgb(168, 168, 168);
+}
+
+h1 {
+  font-size: 80px;
+  margin: 50px 0;
+  text-align: center;
+  /* mengubah ukuran font menjadi 80px lalu memberikan margin dan membuatnya ditengah */
+  text-shadow: 1px 1px 20px white;
+  /* bayangan pada text kekanan 1px, lalu kebawah 1px dan blur 20px warna putih */
+}
+
+.container {
+  width: 600px;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  /* membuat kotak dengan ukuran 600px, warna putih, margin auto agar ditengah, padding jarak 30px */
+  box-shadow: 0 0 3px 3px rgb(0, 0, 0, 0.3);
+  border-radius: 5px;
+  /* box shadow dengan y offsite dan x offsitenya 0 maka akan tepat dibelakang tebalnya 3px (spread) kotaknya blurnya 3 px, lalu untuk membuat transparan
+  maka menggunakan rgba 0.3*/
+}
+
+.gallery li {
+  width: 120px;
+  height: 120px;
+
+  overflow: hidden;
+  border: 3px solid lightgray;
+  float: left;
+  margin-right: 20px;
+  margin-left: 2px;
+  position: relative;
+  margin-top: 10px;
+  /* float untuk membuat foto berikutnya disamping */
+  /* membuat ukuranya 120 lalu border radius untuk membulatkan gambar dan overflow hidden untuk membuat text yg tadinya ada
+  menjadi disembunyikan lalu diberikan border 3px warna lightgray solid */
+}
+.gallery li,
+.gallery li a img,
+.gallery li span {
+  border-radius: 50%;
+}
+.gallery li span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: rgb(200, 200, 200, 0.5);
+
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 120px;
+  color: lightgray;
+  text-shadow: 1px 1px 1px #ffffff;
+  opacity: 0;
+  transform: scale(0) rotate(0);
+  transition: 0.3s;
+}
+.gallery li a:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+.clear {
+  clear: both;
+}
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 999;
+  transition: 0.8;
+  text-align: center;
+  padding: 100px 0;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 7px rgb(0, 0, 0, 0.5);
+}
+
+.overlay:target img {
+  animation: slide 1s;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -20px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 14px;
+  padding: 5px;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: slidedown 0.5s 0.5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .left {
+  animation: slide 0.5s 0.5s forwards;
+}
+
+/* navigasi */
+
+.next,
+.left {
+  width: 288px;
+  height: 288px;
+  background-image: url(../img/right.png);
+  position: absolute;
+  text-indent: -999999;
+  top: 30%;
+  margin-left: 10px;
+  opacity: 0;
+}
+
+.left {
+  background-image: url(../img/left.png);
+  margin-left: -300px;
+}
+
+/* animasi */
+@keyframes zoomandfade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
